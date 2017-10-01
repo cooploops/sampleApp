@@ -14,7 +14,7 @@
   // use default langauge settings of device being used
   firebase.auth().useDeviceLanguage();
   
-  windown.onload = function(){
+  window.onload = function(){
   firebase.auth().signInWithPopup(provider).then(function(result) {
   // This gives you a Facebook Access Token. You can use it to access the Facebook API.
   var token = result.credential.accessToken;
