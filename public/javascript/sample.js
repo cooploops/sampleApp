@@ -11,8 +11,6 @@
 
 var provider = new firebase.auth.FacebookAuthProvider();
 
-provider.addScope('user_friends');
-
 function facebookSignin() {
    firebase.auth().signInWithPopup(provider)
    
