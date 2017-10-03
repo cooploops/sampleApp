@@ -10,12 +10,10 @@
   firebase.initializeApp(config);
 
 var provider = new firebase.auth.FacebookAuthProvider();
-
-function facebookSignin() {
-   firebase.auth().signInWithPopup(provider)
-
    provider.addScope('user_friends');
    provider.addScope('user_location');
+function facebookSignin() {
+   firebase.auth().signInWithPopup(provider)
    
    .then(function(result) {
       var token = result.credential.accessToken;
